@@ -6,7 +6,7 @@
 
 **1. 申请 API Key**
 
-前往 [https://app.tavily.com/home](https://app.tavily.com/home) 注册并获取 API Key。
+前往 [https://www.tavily.com/](https://www.tavily.com/) 注册并获取 API Key。
 
 免费额度：每月 **1000 次**搜索。
 
