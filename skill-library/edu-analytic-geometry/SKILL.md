@@ -26,11 +26,11 @@ description: >-
 - **右栏**：2D Canvas 动态几何画板（圆锥曲线 + 动直线/动点 + 向量 + 点标注 + 网格坐标轴），
   叠加画笔涂鸦工具栏。
 
-形态与目标模板 `/Users/wuyi/code/code2026/6/template/code_artifact.html` 一致。
+形态与本技能的 `template/board.html` 一致。
 
 ## 依赖（重要）
 计算核心 `lib/analytic_kernel.py` 依赖 **sympy**。运行脚本前先确认有能 import sympy 的
-解释器：`python3 -c "import sympy"`（本机用 `/opt/homebrew/bin/python3.11`，sympy 1.14）。
+解释器：`python3 -c "import sympy"`（建议 Python 3.11+、sympy ≥ 1.12）。
 
 **缺库时**：若 import 报错（sympy 或后续任何库），**先询问用户是否安装**，同意后再装
 （`python3 -m pip install <库名>`）或换一个已装该库的解释器；**不要未经询问直接装**。
@@ -148,6 +148,6 @@ python3 -B scripts/generate.py all ./out_dir             # 全部题型
 - `template/board.html` — 数据驱动模板（通用 2D 渲染器 + 参数引擎 + 数据岛 `__LESSON_DATA__`）
 - `lib/conics.py` — 圆锥曲线 sympy 定义库（特殊点 / LaTeX / board dict）
 - `lib/analytic_kernel.py` — sympy 精确求解核心（联立·韦达·范围·定值）
-- `scripts/generate.py` — 注入模板 + 5 个 build_* 范本 + 批量/单题出题
+- `scripts/generate.py` — 注入模板 + 6 个 build_* 范本 + 批量/单题出题
 - `references/problem-schema.md` — 数据格式（board 引擎 schema）
 - `references/conventions.md` — 标准式、解法配方表、韦达/换元套路、端点开闭、自检

@@ -12,7 +12,6 @@
 
 - 教程中使用到的 Skill：[`../skill-library/`](../skill-library/)
 - 教程对应的工作区模板：[`../workspace-templates/`](../workspace-templates/)
-- 入门与功能说明：[`../product-docs/`](../product-docs/)
 
 ## 配图
 

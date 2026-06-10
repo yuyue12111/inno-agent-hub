@@ -47,7 +47,7 @@
 2. 选择「**新建工作区**」，名称填写 `ielts-prep`
 3. 点击「创建」
 
-![新建工作区弹窗，输入 ielts-prep 并点击「创建并绑定」](./assets/01_new_workspace.png)
+![新建工作区弹窗，输入 ielts-prep 并点击「创建」](./assets/01_new_workspace.png)
 
 ---
 
@@ -221,7 +221,7 @@ Agent 触发 card-maker 能力，输出类似：
 Anki 导入：File → Import → cards/climate-change.csv，分隔符「;」
 ```
 
-![卡片生成结果汇总表，右侧文件树出现 cards/renewable-energy.csv](./assets/05_cards_result.png)
+![卡片生成结果汇总表，右侧文件树出现 cards/climate-change.csv](./assets/05_cards_result.png)
 
 ---
 

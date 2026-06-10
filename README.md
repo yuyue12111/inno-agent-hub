@@ -3,7 +3,7 @@
 > Inno Agent 的文档、Skill 与工作区模板合集 —— 一个让你**快速上手、按场景取用、随时贡献**的资源仓库。
 
 [![主项目](https://img.shields.io/badge/main--repo-inno--agent-blue)](https://github.com/hhyqhh/inno-agent)
-[![文档](https://img.shields.io/badge/docs-quickstart-green)](./product-docs/quickstart.md)
+[![教程](https://img.shields.io/badge/docs-tutorial-green)](./how-to/skill-tutorial.md)
 [![Skills](https://img.shields.io/badge/skills-library-orange)](./skill-library/)
 
 ---
@@ -14,7 +14,7 @@
 
 本仓库收集围绕 Inno Agent 的全部**外部资源**：
 
-- **怎么用** —— 官方文档、入门教程、专题指南
+- **怎么用** —— 入门教程、专题指南
 - **能做什么** —— 自研 / 收集的 Skill 包，开箱即用
 - **怎么搭** —— 按场景准备好的工作区模板（agent.md + skills 组合）
 
@@ -26,8 +26,7 @@
 
 | 目录 | 内容 | 适合谁 |
 |---|---|---|
-| 📘 [`product-docs/`](./product-docs/) | 官方文档：5 分钟上手 + 完整说明书 | 第一次接触 Inno Agent |
-| 🛠 [`how-to/`](./how-to/) | 专题教程：Skill 编写、工作区配置等 | 想做点定制 |
+| 🛠 [`how-to/`](./how-to/) | 入门与专题教程：Skill 编写、工作区配置等 | 第一次接触 / 想做点定制 |
 | 🎨 [`skill-library/`](./skill-library/) | Skill 收集库，含说明 + 效果展示 | 想直接拿来用 |
 | 📦 [`workspace-templates/`](./workspace-templates/) | 工作区模板：agent.md + .skills 组合 | 想一键搭建场景 |
 
@@ -37,7 +36,7 @@
 
 按你的角色选择入口：
 
-**🚀 我是新用户** —— 从 [`product-docs/quickstart.md`](./product-docs/quickstart.md) 开始，5 分钟跑通安装与第一次对话。
+**🚀 我是新用户** —— 从 [`how-to/skill-tutorial.md`](./how-to/skill-tutorial.md) 开始，跟着雅思备考的例子跑通第一个工作区。
 
 **🎯 我想试试现成 Skill** —— 浏览 [`skill-library/`](./skill-library/)，挑一个 Skill 包下载，按教程上传到工作区。当前已收录：
 
@@ -78,9 +77,9 @@
 
 欢迎提交你自己的 Skill 或工作区模板：
 
-1. **新 Skill** → 在 `skill-library/` 下新建目录，包含 `SKILL.md` + 必要的 `lib/scripts/template/references/`，外加一份 `README.md` 介绍用途与效果。效果图请放到 `skill-library/assets/<skill-name>/`。
+1. **新 Skill** → 在 `skill-library/` 下新建目录，包含 `SKILL.md` + 必要的 `lib/scripts/template/references/`。用途与效果写在 `SKILL.md` 的 frontmatter `description` 里，并在 `skill-library/README.md` 的 Skill 列表登记一行。效果图请放到 `skill-library/assets/<skill-name>/`。
 2. **新 Workspace 模板** → 在 `workspace-templates/` 下新建目录，包含 `agent.md` 与 `.skills/`，并在该目录的 `README.md` 描述适用场景。
-3. **教程或文档勘误** → 直接 PR 到 `how-to/` 或 `product-docs/`。
+3. **教程或文档勘误** → 直接 PR 到 `how-to/`。
 
 提交前请确认：
 - 不要把 `.DS_Store`、屏幕录像（`*.mov`）等本地文件入库（已在 `.gitignore` 中忽略）

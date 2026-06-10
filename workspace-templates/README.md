@@ -12,7 +12,7 @@
 
 1. 在 Inno Agent 新建一个工作区
 2. 将模板目录下的 `agent.md` 上传到工作区根目录（让 Agent 创建，或拖拽到文件树空白区域）
-3. 将 `.skills/<名称>.md` 通过工作区文件树的 **✦ 按钮**上传
+3. 将模板 `.skills/` 下每个技能的 `SKILL.md`（或自行打包的 `.zip`）通过工作区文件树的 **✦ 按钮**上传，上传后落到工作区的 `.skills/<名称>/SKILL.md`
 4. 新建会话绑定该工作区即可
 
 > 详细操作步骤参见 [`how-to/skill-tutorial.md`](../how-to/skill-tutorial.md)
