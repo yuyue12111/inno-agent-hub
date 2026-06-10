@@ -34,12 +34,6 @@ Inno Agent Skill 集合整理 —— 每个 Skill 是独立目录，可直接下
 
 | Skill | 类型 | 一句话 |
 |---|---|---|
-| [tavily-search](./tavily-search/) | 原创 | 实时网络搜索，补充过时信息（需申请 [Tavily API Key](https://app.tavily.com/home)，免费 1000 次/月） |
-
-### 🌐 工具 · 信息获取
-
-| Skill | 类型 | 一句话 |
-|---|---|---|
 | [tavily-search](./tavily-search/) | 原创 | 实时网络搜索，补充过时信息（需申请 [Tavily API Key](https://www.tavily.com/)，免费 1000 次/月） |
 
 ### 📐 教育 · 数学
