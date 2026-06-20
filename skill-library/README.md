@@ -43,6 +43,12 @@ Inno Agent Skill 集合整理 —— 每个 Skill 是独立目录，可直接下
 | [edu-solid-geometry](./edu-solid-geometry/) | 收集 | 立体几何题 → Three.js 交互 3D 解题页 | [wy51ai/edulab](https://github.com/wy51ai/edulab/tree/master/skills/edu-solid-geometry) | [demo](./assets/edu-solid-geometry/demo.gif) |
 | [edu-analytic-geometry](./edu-analytic-geometry/) | 收集 | 圆锥曲线题 → Canvas 2D 动态画板 | [wy51ai/edulab](https://github.com/wy51ai/edulab/tree/master/skills/edu-analytic-geometry) | [demo](./assets/edu-analytic-geometry/demo.gif) |
 
+### 📚 教育 · 备考与刷题
+
+| Skill | 类型 | 通过验证 | 一句话 | 引用 |
+|---|---|---|---|---|
+| [Exam2Knowledge](./Exam2Knowledge/) | 收集 |  | 把考题逆向拆成高频考点、解题模板与错题库，构建应试模式识别（理科优先） | [AtomerCore/Exam2Knowledge-skill](https://github.com/AtomerCore/Exam2Knowledge-skill) |
+
 ### 📄 文档 · 办公与转换
 
 > 「通过验证」:✅ = 已人工验证可用,留空 = 未验证。
