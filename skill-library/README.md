@@ -79,6 +79,7 @@ Inno Agent Skill 集合整理 —— 每个 Skill 是独立目录，可直接下
 | [baoyu-infographic](./baoyu-infographic/) | 收集 |  | 用 21 种布局与 21 种风格生成可发布的专业信息图 | [JimLiu/baoyu-skills](https://github.com/JimLiu/baoyu-skills/tree/HEAD/skills/baoyu-infographic) |
 | [baoyu-slide-deck](./baoyu-slide-deck/) | 收集 |  | 从内容生成专业幻灯片图像，先出带风格的提纲再逐页生图 | [JimLiu/baoyu-skills](https://github.com/JimLiu/baoyu-skills/tree/HEAD/skills/baoyu-slide-deck) |
 | [smart-illustrator](./smart-illustrator/) | 收集 |  | 智能配图与 PPT 信息图生成器，三种模式（文章配图 / 批量信息图 / 封面图） | [axtonliu/smart-illustrator](https://github.com/axtonliu/smart-illustrator) |
+| [ian-xiaohei-illustrations](./ian-xiaohei-illustrations/) | 收集 |  | 生成 Ian「小黑」风格的中文正文配图（手绘、怪诞、16:9 解释图） | [helloianneo/ian-xiaohei-illustrations](https://github.com/helloianneo/ian-xiaohei-illustrations) |
 
 ### 🧩 元能力 · 技能与提示词
 
