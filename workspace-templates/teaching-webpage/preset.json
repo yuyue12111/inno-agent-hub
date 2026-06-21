@@ -1,0 +1,6 @@
+{
+	"id": "teaching-webpage",
+	"name": "教学网页",
+	"description": "为本节课生成可在教室大屏使用的极简互动网页:知识点展示、随堂答题、课堂问答与小结,导出为单文件 index.html。",
+	"icon": "monitor"
+}

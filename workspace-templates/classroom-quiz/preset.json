@@ -1,0 +1,6 @@
+{
+	"id": "classroom-quiz",
+	"name": "课堂出题",
+	"description": "围绕本节课知识点生成一套随堂练习:题型丰富、分层出题,逐题附知识点、参考答案与详细解析。",
+	"icon": "clipboard-list"
+}
