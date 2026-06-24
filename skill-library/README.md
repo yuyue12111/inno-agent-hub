@@ -70,6 +70,7 @@ Inno Agent Skill 集合整理 —— 每个 Skill 是独立目录，可直接下
 | [baoyu-youtube-transcript](./baoyu-youtube-transcript/) | 收集 |  | 按 URL 或视频 ID 下载 YouTube 字幕与封面，支持翻译与分章 | [JimLiu/baoyu-skills](https://github.com/JimLiu/baoyu-skills/tree/HEAD/skills/baoyu-youtube-transcript) |
 | [baoyu-url-to-markdown](./baoyu-url-to-markdown/) | 收集 |  | 用 baoyu-fetch 抓取任意 URL 转为 markdown，内置 X、YouTube 等适配器 | [JimLiu/baoyu-skills](https://github.com/JimLiu/baoyu-skills/tree/HEAD/skills/baoyu-url-to-markdown) |
 | [understand](./understand/) | 收集 |  | 分析代码库生成交互式知识图谱，理解架构、组件与关系 | [Lum1104/Understand-Anything](https://github.com/Lum1104/Understand-Anything/tree/HEAD/understand-anything-plugin/skills/understand) |
+| [storm-research](./storm-research/) | 收集 |  | 多视角提问 + 联网检索 + 强制引用，产出维基百科式带来源的深度研究报告 | [openwhat007/storm-research](https://github.com/openwhat007/storm-research) |
 
 ### 🎨 创作 · 知识可视化
 
