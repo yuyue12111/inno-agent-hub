@@ -1,0 +1,192 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "title": "Intermediate Representation (IR)",
+  "description": "Unified format for preprocessed homework submissions. All modalities (text, image, video, mixed) are normalized to this schema before evaluation.",
+  "type": "object",
+  "required": [
+    "student_id",
+    "submission_type",
+    "source_files",
+    "extracted_at",
+    "metadata",
+    "content",
+    "gate_results",
+    "processing_log"
+  ],
+  "properties": {
+    "student_id": {
+      "type": "string",
+      "pattern": "^anon-\\d{3,}$",
+      "description": "Anonymous identifier. Real student info stays in a local mapping file, never sent to API."
+    },
+    "submission_type": {
+      "type": "string",
+      "enum": ["text", "image", "video", "mixed"],
+      "description": "Primary modality of the submission"
+    },
+    "source_files": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1,
+      "description": "Relative paths to original files within workspace/raw/"
+    },
+    "extracted_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp of preprocessing"
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "word_count": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Total word/character count of text content"
+        },
+        "paragraph_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "heading_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "has_references": {
+          "type": "boolean",
+          "description": "Whether a references/bibliography section was detected"
+        },
+        "language": {
+          "type": "string",
+          "description": "Detected language code (e.g., zh-CN, en)"
+        },
+        "image_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "resolutions": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Image resolutions as WxH strings"
+        },
+        "total_size_mb": {
+          "type": "number",
+          "minimum": 0
+        },
+        "duration_seconds": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Video duration in seconds (video modality only)"
+        },
+        "fps": {
+          "type": "number",
+          "description": "Video frames per second"
+        }
+      },
+      "additionalProperties": true
+    },
+    "content": {
+      "type": "object",
+      "description": "Modality-specific content. At least one of the sub-fields must be present.",
+      "properties": {
+        "full_text": {
+          "type": "string",
+          "description": "Complete text in Markdown format (text modality)"
+        },
+        "sections": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["heading", "level", "text"],
+            "properties": {
+              "heading": { "type": "string" },
+              "level": { "type": "integer", "minimum": 1, "maximum": 6 },
+              "text": { "type": "string" }
+            }
+          },
+          "description": "Parsed document sections (text modality)"
+        },
+        "images": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["file", "description"],
+            "properties": {
+              "file": { "type": "string" },
+              "type": { "type": "string", "description": "Detected image type (poster, screenshot, etc.)" },
+              "visual_elements": { "type": "string" },
+              "extracted_text": { "type": "string", "description": "OCR text from the image" },
+              "design_observations": { "type": "string" },
+              "description": { "type": "string", "description": "Structured description from Claude Vision" }
+            }
+          },
+          "description": "Image analysis results (image/mixed modality)"
+        },
+        "transcript": {
+          "type": "string",
+          "description": "Timestamped audio transcript (video modality)"
+        },
+        "keyframes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["timestamp", "description"],
+            "properties": {
+              "timestamp": { "type": "string" },
+              "description": { "type": "string" }
+            }
+          },
+          "description": "Keyframe descriptions (video modality)"
+        },
+        "timeline_summary": {
+          "type": "string",
+          "description": "High-level timeline overview (video modality)"
+        },
+        "production_observations": {
+          "type": "object",
+          "properties": {
+            "camera_stability": { "type": "string" },
+            "audio_quality": { "type": "string" },
+            "editing_style": { "type": "string" }
+          },
+          "description": "Video production quality observations"
+        }
+      },
+      "additionalProperties": true
+    },
+    "gate_results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["gate_id", "passed"],
+        "properties": {
+          "gate_id": { "type": "string" },
+          "gate_name": { "type": "string" },
+          "passed": { "type": "boolean" },
+          "details": { "type": "string" },
+          "on_fail": {
+            "type": "string",
+            "enum": ["fail", "flag", "warn"]
+          }
+        }
+      },
+      "description": "Results of gate checks executed during preprocessing"
+    },
+    "processing_log": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["step", "status"],
+        "properties": {
+          "step": { "type": "string" },
+          "status": {
+            "type": "string",
+            "enum": ["success", "warning", "error", "skipped"]
+          },
+          "duration_ms": { "type": "integer" },
+          "message": { "type": "string" }
+        }
+      },
+      "description": "Processing pipeline log entries"
+    }
+  }
+}

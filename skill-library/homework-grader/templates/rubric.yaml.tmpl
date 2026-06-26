@@ -1,0 +1,114 @@
+# Rubric YAML Template
+#
+# Copy this file, replace {{placeholders}}, and save as your-rubric.yaml.
+# All fields marked "REQUIRED" must be present; "OPTIONAL" fields can be
+# deleted entirely if not needed.
+#
+# Validation rules:
+#   - All criteria weights must sum to 1.0 (±0.001 tolerance)
+#   - Each criterion must have anchors for every value in its scale
+#   - thresholds.accept > thresholds.reject
+#   - thresholds.review = [reject, accept]
+
+rubric:
+  # === Metadata (REQUIRED) ===
+  id: "{{course}}-{{assignment}}-v{{version}}"   # Unique identifier
+  name: "{{Rubric display name}}"
+  version: 1.0
+  created: "{{YYYY-MM-DD}}"
+  updated: "{{YYYY-MM-DD}}"
+  author: "{{Author name or team}}"
+
+  # === Course Context (OPTIONAL — remove entire block if not needed) ===
+  course:
+    name: "{{Course name}}"
+    code: "{{Course code}}"
+    semester: "{{e.g., 2025-2026-2}}"
+    assignment: "{{Assignment name or number}}"
+    submission_type: text          # text | image | video | mixed
+    expected_formats:
+      - docx
+      - pdf
+    student_count: 100             # Approximate, used for batch cost estimation
+
+  # === Gate Conditions (OPTIONAL — remove if no pre-scoring checks needed) ===
+  gates:
+    - id: "G-001"
+      name: "{{Gate name}}"
+      description: "{{What this gate checks}}"
+      check_method: keyword        # keyword | structure | length | custom
+      parameters:
+        # --- keyword parameters ---
+        keywords: ["{{keyword1}}", "{{keyword2}}"]
+        min_count: 1
+        # --- structure parameters ---
+        # required_sections: ["{{Section 1}}", "{{Section 2}}"]
+        # required_files: ["*.docx", "*.pdf"]
+        # --- length parameters ---
+        # min_words: 500
+        # max_words: 5000
+        # --- custom parameters ---
+        # prompt: "{{Natural language check description}}"
+      on_fail: flag                # fail | flag | warn
+
+  # === Scoring Criteria (REQUIRED — at least one criterion) ===
+  criteria:
+    {{criterion_id_1}}:                          # e.g., content_depth
+      name: "{{Dimension display name}}"         # e.g., "Content Depth"
+      weight: 0.30                               # All weights must sum to 1.0
+      scale: [1, 2, 3, 4, 5]
+      description: "{{What this dimension measures}}"
+      scoring_guidance: "{{Hints for the AI scorer on how to evaluate this dimension}}"
+      anchors:
+        5: "{{Excellent — specific observable criteria}}"
+        4: "{{Good — specific observable criteria}}"
+        3: "{{Adequate — specific observable criteria}}"
+        2: "{{Below average — specific observable criteria}}"
+        1: "{{Poor — specific observable criteria}}"
+      evidence_type: quote          # quote | observation | metric
+
+    {{criterion_id_2}}:
+      name: "{{Dimension 2 name}}"
+      weight: 0.25
+      scale: [1, 2, 3, 4, 5]
+      description: "{{Description}}"
+      scoring_guidance: "{{Guidance}}"
+      anchors:
+        5: "{{Anchor 5}}"
+        4: "{{Anchor 4}}"
+        3: "{{Anchor 3}}"
+        2: "{{Anchor 2}}"
+        1: "{{Anchor 1}}"
+      evidence_type: observation
+
+    # Add more criteria as needed. Ensure weights sum to 1.0.
+
+  # === Thresholds (REQUIRED) ===
+  thresholds:
+    accept: 3.0                    # Weighted total >= this → pass
+    reject: 1.5                    # Weighted total < this → fail
+    review: [1.5, 3.0]            # Between reject and accept → human review
+
+  # === Comment Guidelines (OPTIONAL — defaults apply if omitted) ===
+  comment_guidelines:
+    tone: "constructive, encouraging, specific"
+    language: "zh-CN"              # Language for generated comments
+    length_range: [200, 400]       # Min and max character count
+    required_sections:
+      - strengths
+      - weaknesses
+      - suggestions
+    prohibited_patterns:
+      - "{{e.g., Vague praise like '写得不错' without specifics}}"
+      - "{{e.g., Vague criticism like '需要加强' without specifics}}"
+
+  # === Version History (OPTIONAL — add entries when Rubric changes) ===
+  history:
+    - version: 1.0
+      date: "{{YYYY-MM-DD}}"
+      changes:
+        - "Initial version"
+      reason: "First deployment"
+
+  # === Notes (OPTIONAL) ===
+  notes: "{{Any overall instructions for the scorer}}"
