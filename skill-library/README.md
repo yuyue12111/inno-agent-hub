@@ -49,6 +49,22 @@ Inno Agent Skill 集合整理 —— 每个 Skill 是独立目录，可直接下
 |---|---|---|---|---|
 | [Exam2Knowledge](./Exam2Knowledge/) | 收集 |  | 把考题逆向拆成高频考点、解题模板与错题库，构建应试模式识别（理科优先） | [AtomerCore/Exam2Knowledge-skill](https://github.com/AtomerCore/Exam2Knowledge-skill) |
 
+### 🧑‍🏫 教育 · 教师与批改
+
+| Skill | 类型 | 通过验证 | 一句话 | 引用 |
+|---|---|---|---|---|
+| [comment-on-docx](./comment-on-docx/) | 收集 |  | 给 Word（.docx）加原生批注式反馈，定位到具体词句、不改原文，适合作文/论文/作业批改 | [tim-hua-01/comment-on-docx](https://github.com/tim-hua-01/comment-on-docx) |
+| [homework-grader](./homework-grader/) | 收集 |  | 量规驱动批改作业：证据引用打分、批量处理、生成评语、师生评分校准、导出 Excel | [ChantillyAn/homework-grader](https://github.com/ChantillyAn/homework-grader) |
+
+### 🎓 教育 · 自学与辅导
+
+| Skill | 类型 | 通过验证 | 一句话 | 引用 |
+|---|---|---|---|---|
+| [tutor](./tutor/) | 收集 |  | 像优秀人类家教一样教任何学科，建立可迁移的真正理解而非直接给答案 | [cdmorozov/claude-tutors](https://github.com/cdmorozov/claude-tutors) |
+| [math-tutor](./math-tutor/) | 收集 |  | 数学自学家教：引导建立真正理解，检查解法/证明而非直接给步骤 | [cdmorozov/claude-tutors](https://github.com/cdmorozov/claude-tutors) |
+| [socratic-tutor](./socratic-tutor/) | 收集 |  | 苏格拉底式引导讲题：0-4 级提示阶梯，绝不直接给完整答案（编程教学） | [Pyroxin/opinionated-claude-skills](https://github.com/Pyroxin/opinionated-claude-skills) |
+| [learning-opportunities](./learning-opportunities/) | 收集 |  | AI 辅助编码后塞入循证学习练习，对抗 vibe coding 的能力退化 | [DrCatHicks/learning-opportunities](https://github.com/DrCatHicks/learning-opportunities) |
+
 ### 📄 文档 · 办公与转换
 
 > 「通过验证」:✅ = 已人工验证可用,留空 = 未验证。
@@ -96,6 +112,7 @@ Inno Agent Skill 集合整理 —— 每个 Skill 是独立目录，可直接下
 | [algorithmic-art](./algorithmic-art/) | 收集 |  | 用 p5.js 创作算法生成艺术，支持随机种子与交互式参数探索 | [anthropics/skills](https://github.com/anthropics/skills/tree/HEAD/skills/algorithmic-art) |
 | [canvas-design](./canvas-design/) | 收集 |  | 运用设计理念创作海报、艺术品等静态视觉作品，输出 PNG 与 PDF | [anthropics/skills](https://github.com/anthropics/skills/tree/HEAD/skills/canvas-design) |
 | [theme-factory](./theme-factory/) | 收集 |  | 用预设主题为幻灯片、文档、HTML 落地页等产物统一配色与字体 | [anthropics/skills](https://github.com/anthropics/skills/tree/HEAD/skills/theme-factory) |
+| [frontend-slides](./frontend-slides/) | 收集 |  | 一句话 / PPT → 零依赖单文件动画网页幻灯片，内置 12 配色预设 + 34 设计模板 | [zarazhangrui/frontend-slides](https://github.com/zarazhangrui/frontend-slides) |
 
 ### 📝 写作 · 文档协作
 
