@@ -1,5 +1,6 @@
 ---
 name: prompt-engineer
+category: 开发工具
 description: >-
   编写、重构与评估 LLM 提示词:产出优化的提示模板、结构化输出 schema、评估量表与测试套件。为新应用设计提示词、改进已有提示或排查触发不准时使用。触发词:提示词, prompt, 提示工程, 优化 prompt, 结构化输出; prompt engineering, refactor prompt.
 ---

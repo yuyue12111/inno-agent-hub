@@ -2,5 +2,6 @@
 	"id": "math-interactive",
 	"name": "数学交互解题",
 	"description": "把解析几何/立体几何题解成可交互的教学网页:2D Canvas 或 3D 模型 + 分步解析,sympy 精确计算驱动,支持文字/随机/图片三种入口。",
+	"category": "教学",
 	"icon": "shapes"
 }

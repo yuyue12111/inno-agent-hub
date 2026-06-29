@@ -1,5 +1,6 @@
 ---
 name: learning-opportunities
+category: 教学辅导
 argument-hint: '[orient]'
 license: CC-BY-4.0
 description: >-

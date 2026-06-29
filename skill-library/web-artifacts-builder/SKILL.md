@@ -1,5 +1,6 @@
 ---
 name: web-artifacts-builder
+category: 内容创作
 description: >-
   用 React、Tailwind CSS、shadcn/ui 等现代前端技术,构建复杂的多组件 claude.ai HTML artifact。需要做交互式网页作品或可视化页面时使用。触发词:HTML artifact, 交互网页, React 组件, 可视化页面; build artifact, interactive web.
 ---
