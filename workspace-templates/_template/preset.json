@@ -2,5 +2,6 @@
 	"id": "_template",
 	"name": "模板示例(复制我)",
 	"description": "新建工作区模板时,复制本目录、改名,然后编辑 preset.json / agent.md / .skills。这段文字会显示在 App 的预设卡片上,建议一句话讲清这个模板帮用户做什么。",
+	"category": "教学",
 	"icon": "sparkles"
 }
