@@ -81,10 +81,67 @@
 2. **新 Workspace 模板** → 在 `workspace-templates/` 下新建目录，包含 `agent.md` 与 `.skills/`，并在该目录的 `README.md` 描述适用场景。
 3. **教程或文档勘误** → 直接 PR 到 `how-to/`。
 
+> ⚠️ **必填:`category` 分类标签** —— Inno Agent 客户端会按 `category` 对技能/预设做分组与筛选,**不写就会被甩到「未分类」分组**。提交新 Skill 或新 Workspace 模板时,**必须在 frontmatter / `preset.json` 里加 `category` 字段**。详细分类列表与写法见下方「[分类标签 (必填)](#分类标签-必填)」一节。
+
 提交前请确认：
+- **已加 `category` 字段**(见下文「分类标签」)
 - 不要把 `.DS_Store`、屏幕录像（`*.mov`）等本地文件入库（已在 `.gitignore` 中忽略）
 - 效果展示用 GIF / PNG，不要直接放视频文件
 - 中文文档优先，必要时附英文说明
+
+---
+
+## 分类标签 (必填)
+
+Inno Agent 客户端会按 `category` 把技能/预设分组显示(技能库浏览器、简单模式预设卡片均按此分组),并支持搜索过滤。**所有新增条目必须带 `category`**;遗漏会落到「未分类」组,体验明显变差。
+
+### 当前分类列表
+
+**Skill 分类** (写在 `SKILL.md` frontmatter):
+
+| 分类 | 适用场景 |
+|---|---|
+| `教学辅导` | 家教/讲题/讲解、自学陪练、作业批改、考点拆解(如 tutor、math-tutor、socratic-tutor、homework-grader、comment-on-docx、edu-* 系列) |
+| `内容创作` | 视觉/图文/幻灯片/前端艺术等创作产出(如 baoyu-comic、smart-illustrator、frontend-design、canvas-design、theme-factory) |
+| `文档处理` | Office / PDF / Markdown / 网页 → 结构化文本的读写转换(如 docx、pdf、pptx、xlsx、markitdown、baoyu-url-to-markdown) |
+| `研究检索` | 学术检索、联网搜索、引用管理、深度研究报告(如 paper-lookup、tavily-search、citation-management、storm-research) |
+| `开发工具` | LLM 应用开发、提示词工程、MCP / Skill 元能力、代码理解与测试(如 claude-api、mcp-builder、prompt-engineer、skill-creator、understand、webapp-testing) |
+
+**Preset 分类** (写在 `preset.json`):
+
+| 分类 | 适用场景 |
+|---|---|
+| `教学` | 备课、出题、讲解、辅导类工作区(如 lesson-plan、classroom-quiz、knowledge-explain、math-interactive、scenario-explain、teaching-webpage、ielts-prep) |
+| `演示` | 幻灯片/演示文稿/分享页类工作区(如 ppt-creation) |
+
+> 新分类不在表里? 提 issue 讨论再加。**不要随手新造一个分类**,会让客户端出现一堆 1 个条目的孤立分组。
+
+### 怎么加
+
+**Skill** — 在 `SKILL.md` frontmatter 的 `name:` 后插一行 `category: <值>`:
+
+```yaml
+---
+name: my-awesome-skill
+category: 教学辅导
+description: >-
+  用一段话讲清这个 skill 做什么...
+---
+```
+
+**Preset** — 在 `preset.json` 里加 `category` 字段(放在 `description` 与 `icon` 之间最直观):
+
+```json
+{
+  "id": "my-template",
+  "name": "我的模板",
+  "description": "一句话说明用途",
+  "category": "教学",
+  "icon": "book-open"
+}
+```
+
+> `category` 是简单的顶层字符串字段,**不要嵌套**、不要用数组、不要本地化(中文标签即可,客户端按字符串匹配分组)。
 
 ---
 
