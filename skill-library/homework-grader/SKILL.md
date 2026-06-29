@@ -1,5 +1,6 @@
 ---
 name: homework-grader
+category: 教学辅导
 version: 1.0.0
 allowed-tools:
 - Read
