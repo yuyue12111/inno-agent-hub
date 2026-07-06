@@ -1,0 +1,7 @@
+{
+	"id": "ai4math-lean-agents",
+	"name": "AI4Math Lean 形式化",
+	"description": "Lean 4 形式化工作区：定理形式化、证明修复、sorry 补全与补丁审查，可按需对接 Numina 等专家后端。",
+	"category": "verymath",
+	"icon": "sigma"
+}

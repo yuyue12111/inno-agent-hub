@@ -1,0 +1,7 @@
+{
+	"id": "ai4math-evolving",
+	"name": "AI4Math 进化 Agent",
+	"description": "进化 Agent 工作区：OpenEvolve 实验项目配置、边界探测运行与迭代改进会话。",
+	"category": "verymath",
+	"icon": "refresh-cw"
+}

@@ -1,0 +1,7 @@
+{
+	"id": "ai4math-optimization",
+	"name": "AI4Math 数学优化",
+	"description": "数学优化工作区：线性规划、混合整数规划、SOCP、CDOpt 流形优化，以及求解器选择与运行。",
+	"category": "verymath",
+	"icon": "trending-up"
+}

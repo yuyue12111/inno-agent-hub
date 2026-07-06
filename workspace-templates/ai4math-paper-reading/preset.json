@@ -1,0 +1,7 @@
+{
+	"id": "ai4math-paper-reading",
+	"name": "AI4Math 数学论文阅读",
+	"description": "数学论文阅读工作区：PDF 摄入、结构拆解、论文转 Skill 工作流，以及数学论文阅读助手模块。",
+	"category": "verymath",
+	"icon": "book-open"
+}

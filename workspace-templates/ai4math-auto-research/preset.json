@@ -1,0 +1,7 @@
+{
+	"id": "ai4math-auto-research",
+	"name": "AI4Math 自动科研",
+	"description": "自动数学科研工作区：Agent Laboratory 配置与运行、问题发现与猜想生成、证明蓝图生成与审查。",
+	"category": "verymath",
+	"icon": "flask-conical"
+}

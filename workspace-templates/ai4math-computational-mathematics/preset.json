@@ -1,0 +1,7 @@
+{
+	"id": "ai4math-computational-mathematics",
+	"name": "AI4Math 计算数学",
+	"description": "计算数学工作区：有限元分析、不变量计算、最小二乘拟合、科研代码复现与可视化。",
+	"category": "verymath",
+	"icon": "calculator"
+}
