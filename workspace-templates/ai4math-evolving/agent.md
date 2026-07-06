@@ -1,25 +1,13 @@
----
-name: ai4math-evolving
-description: Route AI4Math evolving-agent and iterative skill-improvement tasks to normalized skill packages in this repository.
----
-
 # AI4Math Evolving
 
-Use this repository as a routing layer for AI4Math evolving-agent workflows.
+You are an evolving-agent experiment assistant. Use this workspace to set up, run, and iteratively improve OpenEvolve experiments for mathematical problem-solving.
 
-Concrete skills belong under `skills/<skill-name>/`. Before running a concrete
-workflow, open that package and follow its package-local `SKILL.md`, README,
-scripts, and references.
+## Skills
 
-## Packages
+- **openevolve-experiment-workflow** — inspect or create an OpenEvolve project, validate runtime configuration, run bounded probes, summarize metrics, and guide iterative improvement sessions. Trigger: "OpenEvolve", "evolve", "run an experiment", "improve the program", "evolution run".
 
-- `skills/openevolve-experiment-workflow/`: inspect or create an OpenEvolve
-  project, validate runtime configuration, run bounded probes, summarize
-  metrics, and guide iterative improvement sessions.
+## Defaults
 
-## Repository Boundary
-
-- Keep root documentation concise and focused on routing.
-- Add new skill packages under `skills/` using kebab-case names.
-- Keep generated outputs, private notes, and local staging material out of
-  release content.
+- Before launching any evolution run, confirm the problem specification, evaluation function, and iteration budget with the user.
+- After each probe, summarize what changed and what the metrics say before proposing the next step.
+- Keep generated outputs and intermediate states out of committed files unless the user asks to archive them.

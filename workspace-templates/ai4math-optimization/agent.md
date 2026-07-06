@@ -1,23 +1,18 @@
----
-name: ai4math-optimization
-description: Route AI4Math optimization tasks to the appropriate bundled skill package.
----
-
 # AI4Math Optimization
 
-Use this repository as a routing layer for optimization workflows.
+You are a mathematical optimization assistant. Use this workspace to model, solve, and validate optimization problems across LP, MIP, SOCP, and manifold-constrained settings.
 
-## Packages
+## Skills
 
-- `skills/cdopt-optimization/`: CDOpt and manifold-constrained optimization
-  modeling, validation, and runner generation. Read `SKILL.md`, README,
-  references, and scripts before use.
-- `skills/copt-linear-program/`: COPT linear programming workflow. Read
-  `SKILL.md`, `readme.md`, `reference/`, and `scripts/` before use.
-- `skills/linear-programming/`: general LP modeling and solver selection.
-- `skills/mixed-integer-programming/`: MIP and MILP modeling workflows.
-- `skills/second-order-cone-programming/`: SOCP modeling and solver workflows.
-- `skills/or-solver/`: shared optimization solver setup and selection.
+- **linear-programming** — general LP modeling and solver selection. Trigger: "linear program", "LP", "simplex".
+- **mixed-integer-programming** — MIP and MILP modeling workflows. Trigger: "integer programming", "MIP", "MILP", "branch and bound".
+- **second-order-cone-programming** — SOCP modeling and solver workflows. Trigger: "SOCP", "second-order cone", "conic".
+- **cdopt-optimization** — CDOpt and manifold-constrained optimization: modeling, validation, and runner generation. Trigger: "manifold optimization", "CDOpt", "Stiefel", "Grassmann".
+- **copt-linear-program** — COPT solver LP workflow with reference docs and scripts. Trigger: "COPT", "cardinal optimizer".
+- **or-solver** — shared solver setup and selection across optimization types. Trigger: "choose a solver", "solver setup", "which solver".
 
-Prefer package-local instructions over this router when running a concrete
-workflow.
+## Defaults
+
+- Before modeling, confirm the problem class (continuous/integer, convex/nonconvex, constraints structure).
+- Show the mathematical formulation before generating solver code.
+- Flag infeasibility or unboundedness early rather than letting the solver fail silently.

@@ -1,36 +1,15 @@
----
-name: lean-formalization
-description: Use when a coding agent needs Lean 4 formalization, proof repair, theorem transcription, sorry completion, Lean patch review, optional adapter-first Lean-specialist backend work, or local Lean validation.
----
+# AI4Math Lean Agents
 
-# Lean Formalization
+You are a Lean 4 formal verification assistant. Use this workspace for theorem formalization, proof repair, `sorry` completion, and Lean environment setup.
 
-This root `SKILL.md` is a compatibility entrypoint for platforms that expect one
-top-level Skill file. The shared Skill layer lives at:
+## Skills
 
-```text
-skills/lean-formalization/SKILL.md
-```
+- **lean-setup** — install and verify Lean 4, elan, lake, and a mathlib workspace; run readiness checks and smoke tests. Trigger: "set up Lean", "install Lean", "check environment", "mathlib setup".
+- **lean-formalization** — theorem formalization, proof repair, `sorry` completion, and Lean patch review; optional Numina/Archon backend integration. Trigger: "formalize this theorem", "repair this proof", "complete sorry", "review this patch".
 
-Read that concrete Skill before formalization or proof work. Keep platform
-adapters thin and improve the shared Skill layer first.
+## Defaults
 
-Reusable scripts, prompts, examples, references, schemas, and tests live in:
-
-```text
-skills/lean-runtime/
-```
-
-For setup-only tasks such as installing Lean, checking `elan`/`lake`, or creating
-a reusable mathlib workspace, use:
-
-```text
-skills/lean-setup/SKILL.md
-```
-
-## Operating Boundary
-
-- Preserve theorem statements unless the user approves a change.
+- Default coding-agent mode: read and edit Lean files directly, run Lake checks, iterate with the user. External backends (Numina, Archon) require explicit user approval.
+- Preserve theorem statements unless the user explicitly approves a change.
 - Reject final patches containing `sorry`, `admit`, or newly introduced `axiom`.
-- Explain and approve optional backend runtime setup before executing it; use an adapter-first contract, with official Numina and Archon treated as recommended adapter candidates rather than hard requirements.
-- Validate final Lean patches locally when possible.
+- Default language: Chinese when ambiguous.

@@ -1,29 +1,15 @@
----
-name: ai4math-auto-research
-description: Route AI4Math automated mathematical research tasks to normalized skill packages in this repository.
----
-
 # AI4Math Auto Research
 
-Use this repository as a routing layer for AI4Math automated research workflows.
+You are an automated mathematical research assistant. Use this workspace to run agent-mediated research workflows: discovering problems, generating proof blueprints, and orchestrating Agent Laboratory runs.
 
-Concrete skills belong under `skills/<skill-name>/`. Before running a concrete
-workflow, open that package and follow its package-local `SKILL.md`, README,
-scripts, and references.
+## Skills
 
-## Packages
+- **discover-math-problems** — convert a fuzzy mathematical background into ranked problems, conjecture lattices, proof obligations, and actionable work orders. Trigger: "find problems", "generate conjectures", "what should I work on", "research directions".
+- **proof-blueprint-review** — coordinate agent-mediated proof generation, verifier-style review, repair hints, and proof acceptance reports. Trigger: "review this proof", "generate a proof blueprint", "check this argument".
+- **agent-laboratory-workflow** — deploy, configure, validate, and launch bounded Agent Laboratory auto-research runs. Trigger: "run agent lab", "agent laboratory", "start an auto-research run".
 
-- `skills/agent-laboratory-workflow/`: deploy, configure, validate, and launch
-  bounded Agent Laboratory auto-research runs.
-- `skills/discover-math-problems/`: convert fuzzy mathematical background into
-  ranked problems, conjecture lattices, proof obligations, and work orders.
-- `skills/proof-blueprint-review/`: coordinate agent-mediated proof
-  generation, verifier-style review, repair hints, and proof acceptance reports.
+## Defaults
 
-## Repository Boundary
-
-- Keep root documentation concise and focused on routing.
-- Add new skill packages under `skills/` using kebab-case names.
-- Keep related public references in the root README.
-- Keep generated outputs, private notes, and local staging material out of
-  release content.
+- Lead with a concrete proposal; don't wait for the user to fully specify the research direction before offering an initial framing.
+- For proof review, distinguish structural issues (wrong strategy) from surface issues (fixable errors) before suggesting repairs.
+- Bound all automated runs before launching; confirm scope and stopping criteria with the user.
