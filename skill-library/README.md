@@ -51,6 +51,16 @@ Inno Agent Skill 集合整理 —— 每个 Skill 是独立目录，可直接下
 |---|---|---|---|---|
 | [Exam2Knowledge](./Exam2Knowledge/) | 收集 |  | 把考题逆向拆成高频考点、解题模板与错题库，构建应试模式识别（理科优先） | [AtomerCore/Exam2Knowledge-skill](https://github.com/AtomerCore/Exam2Knowledge-skill) |
 
+### 🧑‍🏫 教育 · 教案与教学设计
+
+| Skill | 类型 | 通过验证 | 一句话 | 引用 |
+|---|---|---|---|---|
+| [backwards-design-unit-planner](./backwards-design-unit-planner/) | 收集 |  | 逆向设计（UbD）：从学习成果倒推评估证据与学习活动，产出完整单元教学计划 | [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills/tree/main/skills/curriculum-assessment/backwards-design-unit-planner) |
+| [scope-and-sequence-designer](./scope-and-sequence-designer/) | 收集 |  | 课程范围与进度：跨年级/学期的纵向进阶与横向衔接，带先修依赖与连贯性检查 | [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills/tree/main/skills/curriculum-assessment/scope-and-sequence-designer) |
+| [explicit-instruction-sequence-builder](./explicit-instruction-sequence-builder/) | 收集 |  | 显性教学课时序列（I Do/We Do/You Do），含理解检查点与时间分配的可上课教案 | [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills/tree/main/skills/explicit-instruction/explicit-instruction-sequence-builder) |
+| [differentiation-adapter](./differentiation-adapter/) | 收集 |  | 同一任务按学困/超常/多动/读写障碍等差异化适配，保持学习目标不变 | [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills/tree/main/skills/curriculum-assessment/differentiation-adapter) |
+| [formative-assessment-technique-selector](./formative-assessment-technique-selector/) | 收集 |  | 按教学时刻挑随堂检测/形成性评估技术，含实施步骤与学生应答解读 | [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills/tree/main/skills/curriculum-assessment/formative-assessment-technique-selector) |
+
 ### 🧑‍🏫 教育 · 教师与批改
 
 | Skill | 类型 | 通过验证 | 一句话 | 引用 |
