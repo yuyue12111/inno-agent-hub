@@ -1,0 +1,7 @@
+{
+	"id": "ielts-coach",
+	"name": "IELTS Prep Coach",
+	"description": "A closed-loop IELTS coaching workspace: grades essays against the official four criteria, drills reading with authentic question types, turns new words into Anki cards, and runs weekly reviews that re-quiz your weak spots until you master them.",
+	"category": "教学",
+	"icon": "languages"
+}
