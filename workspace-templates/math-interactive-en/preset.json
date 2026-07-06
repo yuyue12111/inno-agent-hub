@@ -1,0 +1,7 @@
+{
+	"id": "math-interactive-en",
+	"name": "Interactive Math Solver",
+	"description": "Turn analytic / solid geometry problems into interactive teaching webpages: 2D Canvas or 3D model + step-by-step solution, driven by exact sympy computation, with text / random / image entry points.",
+	"category": "教学",
+	"icon": "shapes"
+}

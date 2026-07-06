@@ -1,0 +1,7 @@
+{
+	"id": "teaching-webpage-en",
+	"name": "Teaching Webpage",
+	"description": "Generate a minimal interactive webpage for a lesson, ready to use on the classroom big screen: concept display, in-class quizzing, live Q&A tools, and a wrap-up — exported as a single-file index.html.",
+	"category": "教学",
+	"icon": "monitor"
+}
