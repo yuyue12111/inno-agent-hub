@@ -46,6 +46,7 @@
 **📦 我想按场景一键搭建工作区** —— 去 [`workspace-templates/`](./workspace-templates/) 选模板，复制 `agent.md` + `.skills/` 即可。当前已收录：
 
 - [`ielts-prep`](./workspace-templates/ielts-prep/) — 雅思英语备考工作区
+- **VeryMath AI4Math 系列**（7 个模板） — 来自 [VeryMath](https://github.com/VeryMath) 开源组织，覆盖数学形式化、论文读写、计算数学、优化、自动科研、进化实验等场景
 
 **🧑‍🏫 我想自己写 Skill** —— 读 [`how-to/skill-tutorial.md`](./how-to/skill-tutorial.md)，看 `agent.md` 与 SKILL 包的设计与上传方式。
 
@@ -150,6 +151,14 @@ description: >-
 
 - [`hhyqhh/inno-agent`](https://github.com/hhyqhh/inno-agent) — 主项目（Inno Agent 运行时）
 - [`wy51ai/edulab`](https://github.com/wy51ai/edulab) — 教育领域 Skill 上游来源
+- [**VeryMath**](https://github.com/VeryMath) — AI4Math 数学智能体，本仓库 `verymath` 分类下 7 个工作区模板的上游来源。VeryMath 专注于用 AI Agent 辅助数学研究，涵盖 Lean 4 形式化证明、计算数学、数学优化、论文读写、自动科研等方向。对应仓库：
+  - [`AI4Math-Lean-Agents`](https://github.com/VeryMath/AI4Math-Lean-Agents) → 模板 `ai4math-lean-agents`
+  - [`AI4Math-Paper-Reading`](https://github.com/VeryMath/AI4Math-Paper-Reading) → 模板 `ai4math-paper-reading`
+  - [`AI4Math-Paper-Writing`](https://github.com/VeryMath/AI4Math-Paper-Writing) → 模板 `ai4math-paper-writing`
+  - [`AI4Math-Computational-Mathematics`](https://github.com/VeryMath/AI4Math-Computational-Mathematics) → 模板 `ai4math-computational-mathematics`
+  - [`AI4Math-Optimization`](https://github.com/VeryMath/AI4Math-Optimization) → 模板 `ai4math-optimization`
+  - [`AI4Math-Auto-Research`](https://github.com/VeryMath/AI4Math-Auto-Research) → 模板 `ai4math-auto-research`
+  - [`AI4Math-Evolving`](https://github.com/VeryMath/AI4Math-Evolving) → 模板 `ai4math-evolving`
 
 ---
 
